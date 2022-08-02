@@ -1,6 +1,6 @@
-const aboutTemplate = document.createElement('template');
+const contactTemplate = document.createElement('template');
 
-aboutTemplate.innerHTML = `
+contactTemplate.innerHTML = `
 <style>
 
 .btnHireMe {
@@ -24,7 +24,7 @@ aboutTemplate.innerHTML = `
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 100px;
 }
 
 @font-face {
@@ -134,12 +134,12 @@ input{
 </section>
 `;
 
-class AboutComponent extends HTMLElement {
+class ContactComponent extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: 'open'});
-        this.shadowRoot.appendChild(aboutTemplate.content.cloneNode(true));
+        this.shadowRoot.appendChild(contactTemplate.content.cloneNode(true));
     }
 }
 
-window.customElements.define('contact-component', AboutComponent);
+window.customElements.define('contact-component', ContactComponent);

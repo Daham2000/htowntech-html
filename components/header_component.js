@@ -68,7 +68,7 @@ headerComponent.innerHTML = `
     </div>
     <div id="headerButtonSection">
         <button class="btn success">HOME</button>
-        <button class="btn">ABOUT</button>
+        <button class="btn" onclick="onClickAbout()">ABOUT</button>
         <button class="btn">SERVICES</button>
         <button class="btn">PROJECTS</button>
         <button class="btn" onclick="onClickContact()">CONTACTS</button>
@@ -86,6 +86,10 @@ class HeaderComponent extends HTMLElement {
 }
 
 function onClickContact(){
+    window.scrollBy(0, 1250);
+}
+
+function onClickAbout(){
     window.scrollBy(0, 650);
 }
 
