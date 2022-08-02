@@ -71,7 +71,7 @@ headerComponent.innerHTML = `
         <button class="btn">ABOUT</button>
         <button class="btn">SERVICES</button>
         <button class="btn">PROJECTS</button>
-        <button class="btn">CONTACTS</button>
+        <button class="btn" onclick="onClickContact()">CONTACTS</button>
     </div>
     <button class="btnBold">HIRE ME</button>
 </section>
@@ -83,6 +83,10 @@ class HeaderComponent extends HTMLElement {
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(headerComponent.content.cloneNode(true));
     }
+}
+
+function onClickContact(){
+    window.scrollBy(0, 650);
 }
 
 window.customElements.define('header-component', HeaderComponent);
