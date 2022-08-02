@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo-html-training</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
 
+<!--appbar component-->
+<app-bar-component></app-bar-component>
+<!--header component-->
+<header-component></header-component>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="assets/laptop.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="assets/laptop_2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="assets/laptop_3.jpg" style="width:100%">
+    </div>
+
+</div>
+
+<section id="sectionIntro">
+    <h3 id="introText">MAKE YOUR OWN WORLD</h3>
+    <p id="introDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum sapien nec ipsum eleifend malesuada. Praesent dictum ullamcorper justo. Donec condimentum sapien nec ipsum eleifend malesuada. Praesent dictum ullamcorper justo.</p>
+</section>
+
+<script src="components/app_bar_component.js"></script>
+<script src="components/header_component.js"></script>
+<script src="controllers/slider_ctrl.js"></script>
 </body>
 </html>
