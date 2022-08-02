@@ -56,6 +56,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 #introText{
@@ -76,4 +77,48 @@ body {
     font-size: 12px;
     text-align: center;
     padding: 0 60px;
+}
+
+#sectionIntroBtn{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.btnHireMe{
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 15px;
+    height: 30px;
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
+    background: #0F52BA 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnContactMe{
+    border-color: #0F52BA ;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 15px;
+    height: 30px;
+    color: #0F52BA;
+    font-size: 10px;
+    cursor: pointer;
+    background: white 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    text-align: center;
+}
+
+#arrowRight{
+    width: 11px;
+    color: white;
+    padding-left: 6px;
 }
