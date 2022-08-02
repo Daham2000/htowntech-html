@@ -79,7 +79,7 @@ introTemplate.innerHTML = `
     <p id="introDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum sapien nec ipsum eleifend malesuada. Praesent dictum ullamcorper justo. Donec condimentum sapien nec ipsum eleifend malesuada. Praesent dictum ullamcorper justo.</p>
     <div id="sectionIntroBtn">
         <button class="btnHireMe">HIRE ME <img src="assets/arrow_right_icon.png" id="arrowRight"></button>
-        <button class="btnContactMe">CONATCT ME</button>
+        <button class="btnContactMe" onclick="moveToContact()">CONTACT ME</button>
     </div>
 </section>
 `;
@@ -90,6 +90,10 @@ class IntroComponent extends HTMLElement {
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(introTemplate.content.cloneNode(true));
     }
+}
+
+function moveToContact(){
+    document.getElementById('contact').scrollIntoView();
 }
 
 window.customElements.define('intro-component', IntroComponent);

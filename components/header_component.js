@@ -69,9 +69,9 @@ headerComponent.innerHTML = `
     <div id="headerButtonSection">
         <button class="btn success">HOME</button>
         <button class="btn" onclick="onClickAbout()">ABOUT</button>
-        <button class="btn">SERVICES</button>
+        <button class="btn" onclick="onClickService()">SERVICES</button>
         <button class="btn">PROJECTS</button>
-        <button class="btn" onclick="onClickContact()">CONTACTS</button>
+        <button class="btn" onclick="onClickContactHeader()">CONTACTS</button>
     </div>
     <button class="btnBold">HIRE ME</button>
 </section>
@@ -85,12 +85,16 @@ class HeaderComponent extends HTMLElement {
     }
 }
 
-function onClickContact(){
-    window.scrollBy(0, 1250);
+function onClickContactHeader(){
+    document.getElementById('contact').scrollIntoView();
 }
 
 function onClickAbout(){
-    window.scrollBy(0, 650);
+    document.getElementById('aboutID').scrollIntoView();
+}
+
+function onClickService(){
+    document.getElementById('servicesID').scrollIntoView();
 }
 
 window.customElements.define('header-component', HeaderComponent);

@@ -24,7 +24,7 @@ contactTemplate.innerHTML = `
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 5px;
 }
 
 @font-face {

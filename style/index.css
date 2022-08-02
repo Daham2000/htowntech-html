@@ -68,11 +68,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 371px;
+    width: 150px;
     font-family: Montserrat;
     align-items: center;
     color: #FFFFFF;
     text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 .columnSection {
@@ -85,6 +86,16 @@ body {
 @font-face {
     font-family: Montserrat;
     src: url("../assets/montserrat.regular.ttf");
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../assets/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url("../assets/OpenSans-Bold.ttf");
 }
 
 .blueText {
@@ -102,4 +113,57 @@ body {
     letter-spacing: 0.04px;
     margin: 0;
     margin-top: 12px;
+}
+
+.description {
+    font-family: Arial;
+    color: #707070;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 80px;
+    width: 60%;
+}
+
+.serviceBox {
+    width: 304px;
+    height: 350px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 6px 6px 17px #00000029;
+    border-radius: 10px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.blackTextServiceBox {
+    color: #111F2C;
+    font-family: OpenSansBold, serif;
+    font-size: 17px;
+    letter-spacing: 0.04px;
+    margin: 0;
+    margin-top: 12px;
+    font-weight: bolder;
+}
+
+.arrowRight {
+    width: 11px;
+    color: white;
+    padding-left: 6px;
+}
+
+.serviceBoxTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.serviceBoxTopImg {
+    width: 130px;
+    height: 130px;
+    padding-top: 20px;
 }
