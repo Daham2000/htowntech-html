@@ -94,6 +94,11 @@ body {
 }
 
 @font-face {
+    font-family: MontserratSemiBold;
+    src: url("../assets/MontserratAlternates-SemiBold.otf");
+}
+
+@font-face {
     font-family: OpenSans;
     src: url("../assets/OpenSans-Regular.ttf");
 }
@@ -246,6 +251,7 @@ img {vertical-align: middle;}
     margin-top: 5px;
     color: #FFFFFF;
     font-weight: normal;
+    text-align: start;
 }
 .footerTextH2 {
     font-family: Montserrat, serif;
@@ -267,6 +273,7 @@ img {vertical-align: middle;}
     width: 16px;
     color: white;
     padding-right: 10px;
+    margin: 0;
 }
 hr{
     width: 100vw;
@@ -281,4 +288,7 @@ hr.solid {
 .footerBottomID{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
 }
