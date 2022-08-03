@@ -36,13 +36,60 @@
 <about-component id="aboutID"></about-component>
 <br>
 <services-component id="servicesID"></services-component>
+<br>
+<br>
+<!--projects section-->
+<section id="projectsSection">
+    <h3 class="projectText">Project</h3>
+    <h4 class="projectTextDes">SOME OF MY WORKS</h4>
+    <div class="slideshow-container-projects">
+
+        <div class="mySlides_p fade">
+            <img src="assets/laptop.png">
+        </div>
+
+        <div class="mySlides_p fade">
+            <img src="assets/laptop_2.jpg">
+        </div>
+
+        <div class="mySlides_p fade">
+            <img src="assets/laptop_3.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+</section>
 
 <br>
 <br>
 <br>
 <!--contact me section-->
 <contact-component id="contact"></contact-component>
+<br>
+<br>
+<section class="footerID">
+    <div class="footerTopID">
+        <div class="footerTopColumn">
+            <h2 id="dahamIDName">DAHAM.</h2>
+            <p class="footerParam">Sit amet consectetur adipiscin seeiusmod tempor incididunt ut dolore magna
+                aliqu asusp</p>
+            <h2 class="projectText">FOLLOW ME ON</h2>
+            <div id="socialIconSec">
+                <img src="assets/twitter_icon.png" class="socialIcon">
+                <img src="assets/facebook_icon.png" class="socialIcon">
+                <img src="assets/instagram_icon.png" class="socialIcon">
+                <img src="assets/linkedin_icon.png" class="socialIcon">
+            </div>
+        </div>
 
+    </div>
+    <hr class="solid">
+    <div class="footerBottomID" style="padding-top: 4px;">
+        <p class="footerParam" style="width: 400px; padding-left: 20px">Copyright @ dhmtech.com All Rights Reserved</p>
+    </div>
+</section>
 <script src="components/app_bar_component.js"></script>
 <script src="components/header_component.js"></script>
 <script src="components/intro_section.js"></script>
@@ -50,5 +97,6 @@
 <script src="components/about_component.js"></script>
 <script src="components/services_component.js"></script>
 <script src="controllers/slider_ctrl.js"></script>
+
 </body>
 </html>

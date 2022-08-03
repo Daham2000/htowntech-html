@@ -2,6 +2,11 @@ const headerComponent = document.createElement('template');
 
 headerComponent.innerHTML = `
 <style>
+@font-face {
+    font-family: Montserrat;
+    src: url("../assets/montserrat.regular.ttf");
+}
+
 #headerSection {
     display: flex;
     flex-direction: row;
@@ -11,7 +16,7 @@ headerComponent.innerHTML = `
 }
 
 #dahamIDName {
-    font-family: Arial;
+    font-family: Montserrat;
     color: #0f52ba;
     letter-spacing: 3px;
     margin-left: 30px;
@@ -68,10 +73,10 @@ headerComponent.innerHTML = `
     </div>
     <div id="headerButtonSection">
         <button class="btn success">HOME</button>
-        <button class="btn" onclick="onClickAbout()">ABOUT</button>
-        <button class="btn" onclick="onClickService()">SERVICES</button>
-        <button class="btn">PROJECTS</button>
-        <button class="btn" onclick="onClickContactHeader()">CONTACTS</button>
+        <button class="btn" onclick=onClickMove("aboutID")>ABOUT</button>
+        <button class="btn" onclick=onClickMove("servicesID")>SERVICES</button>
+        <button class="btn" onclick=onClickMove("projectsSection")>PROJECTS</button>
+        <button class="btn" onclick=onClickMove("contact")>CONTACTS</button>
     </div>
     <button class="btnBold">HIRE ME</button>
 </section>
@@ -85,16 +90,10 @@ class HeaderComponent extends HTMLElement {
     }
 }
 
-function onClickContactHeader(){
-    document.getElementById('contact').scrollIntoView();
+function onClickMove(section){
+    console.log(section)
+    document.getElementById(section).scrollIntoView();
 }
 
-function onClickAbout(){
-    document.getElementById('aboutID').scrollIntoView();
-}
-
-function onClickService(){
-    document.getElementById('servicesID').scrollIntoView();
-}
 
 window.customElements.define('header-component', HeaderComponent);
