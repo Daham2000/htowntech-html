@@ -76,7 +76,8 @@ introTemplate.innerHTML = `
 
 <section id="sectionIntro">
     <h3 id="introText">MAKE YOUR OWN WORLD</h3>
-    <p id="introDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum sapien nec ipsum eleifend malesuada. Praesent dictum ullamcorper justo. Donec condimentum sapien nec ipsum eleifend malesuada. Praesent dictum ullamcorper justo.</p>
+    <p id="introDescription">You want a high performance application to scale up your business or
+    to convert your own genuine app idea to a real world application. Can you contact me anytime you want.</p>
     <div id="sectionIntroBtn">
         <button class="btnHireMe">HIRE ME <img src="assets/arrow_right_icon.png" id="arrowRight"></button>
         <button class="btnContactMe" onclick="moveToContact()">CONTACT ME</button>

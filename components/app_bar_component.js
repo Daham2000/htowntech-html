@@ -2,6 +2,11 @@ const appBarTemplate = document.createElement('template');
 
 appBarTemplate.innerHTML = `
 <style>
+@font-face {
+    font-family: SegoeUI;
+    src: url("../assets/SegoeUI.ttf");
+}
+
 #appBarSection {
     background-color: #1d1e59;
     height: 30px;
@@ -14,21 +19,23 @@ appBarTemplate.innerHTML = `
 }
 
 .appBarIcon {
-    width: 13px;
+    width: 11px;
     color: white;
-    margin-left: 10vw;
 }
 
 .contactText {
     color: white;
-    padding-left: 5px;
-    font-family: Inter;
+    padding: 0 0 2.5px 5px;
+    font-family: SegoeUI,serif;
+    letter-spacing: 1.4px;
+    font-size: 11px;
+    margin: 0;
 }
 
 .contactEmail {
     display: flex;
     flex-direction: row;
-    font-family: Inter;
+    margin-left: 31px;
 }
 
 #contactNameSection {
@@ -57,21 +64,25 @@ appBarTemplate.innerHTML = `
     <div id="contactNameSection">
         <div class="contactEmail">
             <img src="assets/email_icon.svg" class="appBarIcon">
-            <h6 class="contactText">dhmakal2000@gmail.com</h6>
+            <p class="contactText">dhmakla2000@gmail.com</p>
         </div>
         <div class="contactEmail">
             <img src="assets/phone_icon.svg" class="appBarIcon">
-            <h6 class="contactText">+94 772934677</h6>
+            <p class="contactText">+94 772934677</p>
         </div>
     </div>
     <div id="socialIconSec">
         <img src="assets/twitter_icon.png" class="socialIcon">
         <img src="assets/facebook_icon.png" class="socialIcon">
         <img src="assets/instagram_icon.png" class="socialIcon">
-        <img src="assets/linkedin_icon.png" class="socialIcon">
+        <img onclick=openInNewTab("https://www.linkedin.com/in/daham-akalanka-b673a9195/") src="assets/linkedin_icon.png" class="socialIcon">
     </div>
 </section>
 `;
+
+function openInNewTab(url) {
+    window.open(url, '_blank').focus();
+}
 
 class AppBarComponent extends HTMLElement {
     constructor() {

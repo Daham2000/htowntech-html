@@ -117,9 +117,8 @@ servicesTemplate.innerHTML = `
 <section class="columnSection">
     <h4 class="blueText">Services</h4>
     <h4 class="blackText">WHAT I DO</h4>
-    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum sapien nec ipsum
-        eleifend malesuada.
-        Praesent dictum ullamcorper justo, sit amet volutpat tortor tincidun.</p>
+    <p class="description">There are all services that I'm providing to the world to 
+    scale up for business and to make your idea real.</p>
     <br>
     <section style="display: flex; flex-direction: row; margin: 25px">
         <div class="serviceBox">

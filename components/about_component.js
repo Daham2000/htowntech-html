@@ -187,13 +187,14 @@ aboutTemplate.innerHTML = `
                             <img src="assets/twitter-icon-black.png" class="socialIcon">
                             <img src="assets/facebook-icon-black.png" class="socialIcon">
                             <img src="assets/instagram-icon-black.png" class="socialIcon">
-                            <img src="assets/linkedin-black.svg" class="socialIcon">
+                            <img onclick=openInNewTab("https://www.linkedin.com/in/daham-akalanka-b673a9195/") src="assets/linkedin-black.svg" class="socialIcon">
                         </div>
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: row; margin-top: 10px; width: 20vw">
-                    <button class="btnHireMe">DOWNLOAD CV<img src="assets/down-arrow.png" id="arrowRight"></button>
-                    <button class="btnHireMe" style=" background-color: #413F42; margin-left: 16px">VISIT MY BLOG<img src="assets/arrow_right_icon.png" style="width: 11px; padding-left: 6px;">
+                    <button onclick=openInNewTab("https://drive.google.com/file/d/16Wek-g5pC16qFwFlmJy7buvY0Wjpt0wi/view?usp=sharing") class="btnHireMe">DOWNLOAD CV<img src="assets/down-arrow.png" id="arrowRight"></button>
+                    <button onclick=onclick=openInNewTab("https://dahamblog.com") 
+                    class="btnHireMe" style=" background-color: #413F42; margin-left: 16px">VISIT MY BLOG<img src="assets/arrow_right_icon.png" style="width: 11px; padding-left: 6px;">
                     </button>
                 </div>
             </section>
@@ -202,6 +203,10 @@ aboutTemplate.innerHTML = `
     </div>
 </section>
 `;
+
+function openInNewTab(url) {
+    window.open(url, '_blank').focus();
+}
 
 class AboutComponent extends HTMLElement {
     constructor() {
