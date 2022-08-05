@@ -62,6 +62,7 @@ servicesTemplate.innerHTML = `
     justify-content: space-between;
     align-items: center;
     margin-right: 25px;
+    margin-top: 25px;
 }
 
 .blackTextServiceBox {
@@ -112,6 +113,35 @@ servicesTemplate.innerHTML = `
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+#sectionService {
+    display: flex; 
+    flex-direction: row; 
+    margin: 25px;
+}
+
+@media screen and (max-width: 980px) {
+  #sectionService {
+    display: flex; 
+    flex-direction: column; 
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+}
+#sectionServiceTwo {
+    display: flex; 
+    flex-direction: row; 
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 697px) {
+  #sectionServiceTwo {
+    display: flex; 
+    flex-direction: column; 
+}
+}
+
+}
 </style>
 
 <section class="columnSection">
@@ -120,8 +150,9 @@ servicesTemplate.innerHTML = `
     <p class="description">There are all services that I'm providing to the world to 
     scale up for business and to make your idea real.</p>
     <br>
-    <section style="display: flex; flex-direction: row; margin: 25px">
-        <div class="serviceBox">
+    <section id="sectionService">
+        <div id="sectionServiceTwo">
+    <div class="serviceBox">
             <div class="serviceBoxTop">
                 <img src="assets/web.png" class="serviceBoxTopImg">
                 <h3 class="blackTextServiceBox">WEB
@@ -139,6 +170,8 @@ servicesTemplate.innerHTML = `
             </div>
             <button class="btnHireMe" onclick="onClickContact()">CONTACT ME<img src="assets/arrow_right_icon.png" class="arrowRight"></button>
         </div>
+        </div>
+        
         <div class="serviceBox">
             <div class="serviceBoxTop">
                 <img src="assets/mobile.png" class="serviceBoxTopImg">
@@ -151,9 +184,11 @@ servicesTemplate.innerHTML = `
 
 </section>
 `;
-function onClickContact(){
+
+function onClickContact() {
     document.getElementById('contact').scrollIntoView();
 }
+
 class ServicesComponent extends HTMLElement {
     constructor() {
         super();

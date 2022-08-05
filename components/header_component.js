@@ -47,7 +47,7 @@ headerComponent.innerHTML = `
     border: none;
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 15px;
+    margin-right: 2vw;
     height: 30px;
     color: white;
     font-size: 12px;

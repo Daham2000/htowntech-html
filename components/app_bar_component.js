@@ -49,8 +49,9 @@ appBarTemplate.innerHTML = `
 #socialIconSec {
     display: flex;
     flex-direction: row;
-    width: 50px;
-    padding-right: 5vw;
+    /*width: 50px;*/
+    /*padding-right: 5vw;*/
+     margin-right: 2vw;
 }
 
 .socialIcon {
