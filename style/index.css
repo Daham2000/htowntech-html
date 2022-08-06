@@ -327,11 +327,6 @@ hr.solid {
     margin-left: 50px;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
-
 .sliderBtn{
     font-size: 15px;
     color: #FFFFFF;
@@ -359,5 +354,13 @@ hr.solid {
         flex-direction: column;
         margin-left: 10px;
         margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .footerParam{
+        width: 120px;
+        margin-right: 5px;
     }
 }

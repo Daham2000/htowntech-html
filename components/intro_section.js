@@ -19,6 +19,7 @@ introTemplate.innerHTML = `
     padding-top: 20px;
     margin: 0;
     font-weight: bold;
+    text-align:center;
 }
 
 #introDescription{
