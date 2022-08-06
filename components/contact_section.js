@@ -98,6 +98,41 @@ input{
     align-items: flex-start;
     text-align: left;
 }
+@media screen and (max-width: 800px) {
+    #contactForm{
+        margin-top: 25px;
+        margin-left: 0vw;
+    }
+    #contactBackground{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 697px) {
+    #contactForm{
+        margin-top: 25px;
+        margin-left: 0;
+        width: 70vw;
+        margin-right: 0;
+    }
+    #contactBackground{
+        display: flex;
+        width: 75vw;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .labelClass{
+        width: 60vw;
+    }
+    input {
+        width: 55vw;
+    }
+    .btnHireMe{
+        width: 55vw;
+    }
+}
 </style>
 
 <section class="columnSection">

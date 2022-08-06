@@ -12,8 +12,21 @@
 <!--appbar component-->
 <app-bar-component></app-bar-component>
 
+<!--Side slider section-->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <h3 class="sliderBtn">HOME</h3>
+        <h3 class="sliderBtn" onclick=onClickMove("aboutID")>ABOUT</h3>
+        <h3 class="sliderBtn" onclick=onClickMove("servicesID")>SERVICES</h3>
+        <h3 class="sliderBtn" onclick=onClickMove("projectsSection")>PROJECTS</h3>
+        <h3 class="sliderBtn" onclick=onClickMove("contact")>CONTACTS</h3>
+    </div>
+</div>
+<span id="drawerIcon" onclick="openNav()">&#9776;</span>
+
 <!--header component-->
-<header-component></header-component>
+<header-component id="headerID"></header-component>
 
 <div class="slideshow-container">
 
@@ -85,7 +98,7 @@
                 <img src="assets/linkedin_icon.png" class="socialIcon">
             </div>
         </div>
-        <div class="footerTopColumn" style="margin-left: 100px; margin-bottom: 5px;">
+        <div class="footerTopColumn">
             <h2 class="projectText">Get In Touch</h2>
             <div class="footerBottomID">
                 <img src="assets/location_icon.svg" class="socialIcon" style="margin-top: 4px; width: 11px">
@@ -106,6 +119,7 @@
         <p class="footerParam" style="width: 400px; padding-left: 20px">Copyright @ dhmtech.info All Rights Reserved</p>
     </div>
 </section>
+
 <script src="components/app_bar_component.js"></script>
 <script src="components/header_component.js"></script>
 <script src="components/intro_section.js"></script>

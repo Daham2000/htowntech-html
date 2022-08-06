@@ -33,6 +33,36 @@ aboutTemplate.innerHTML = `
     font-size: 13px;
 }
 
+.aboutRowSection{
+    display: flex;
+    flex-direction: row;
+    padding-top: 33px;
+}
+
+#buttonSection{
+    display: flex; 
+    flex-direction: row; 
+    margin-top: 10px; 
+    width: 20vw;
+}
+.btnHireMe {
+    border: none;
+    height: 30px;
+    font-size: 9px;
+    cursor: pointer;
+    background: #0F52BA 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: Montserrat;
+    align-items: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
 #paramSection{
     display: flex;
     flex-direction: column;
@@ -41,12 +71,6 @@ aboutTemplate.innerHTML = `
     margin: 0;
     padding: 0;
     margin-left: 100px;
-}
-
-.aboutRowSection{
-    display: flex;
-    flex-direction: row;
-    padding-top: 33px;
 }
 
 #profilePhoto{
@@ -110,25 +134,6 @@ aboutTemplate.innerHTML = `
     padding-left: 6px;
 }
 
-.btnHireMe {
-    border: none;
-    height: 30px;
-    font-size: 9px;
-    cursor: pointer;
-    background: #0F52BA 0% 0% no-repeat padding-box;
-    border-radius: 5px;
-    opacity: 1;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 371px;
-    font-family: Montserrat;
-    align-items: center;
-    color: #FFFFFF;
-    text-transform: uppercase;
-}
-
 .columnSection {
     display: flex;
     flex-direction: column;
@@ -156,6 +161,82 @@ aboutTemplate.innerHTML = `
     letter-spacing: 0.04px;
     margin: 0;
     margin-top: 12px;
+}
+
+@media screen and (max-width: 800px) {
+    #rowSection{
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .photoTwo{
+        width: 330px;
+        height: 120px;
+        position: absolute;
+        bottom: -11%;
+        left: 25%;
+    }
+    #param{
+        width: 50vw;
+        color: #413F42;
+        letter-spacing: 1.86px;
+        font-size: 13px;
+        margin: 50px 0 30px;
+        text-align: center;
+    }
+    #paramSection{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .aboutRowSection {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        padding-top: 0px;
+    }
+    #buttonSection{
+        display: flex; 
+        flex-direction: row; 
+        margin-top: 10px; 
+        width: 45vw;
+    }
+    .btnHireMe {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 580px){
+    .photoOne{
+        height: 60vw;
+        width: 85vw;
+    }
+    .photoTwo{
+            width: 65vw;
+            height: 25vw;
+            position: absolute;
+            bottom: -6%;
+            left: 15%;
+    }
+    #param {
+        width: 65vw;
+        color: #413F42;
+        letter-spacing: 1.86px;
+        font-size: 13px;
+        margin: 50px 0 30px;
+    }
+    #buttonSection{
+        display: flex; 
+        flex-direction: row; 
+        margin-top: 10px; 
+        width: 65vw;
+    }
+    .btnHireMe {
+        width: 30vw;
+    }
 }
 </style>
 
@@ -191,7 +272,7 @@ aboutTemplate.innerHTML = `
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; flex-direction: row; margin-top: 10px; width: 20vw">
+                <div id="buttonSection">
                     <button onclick=openInNewTab("https://drive.google.com/file/d/16Wek-g5pC16qFwFlmJy7buvY0Wjpt0wi/view?usp=sharing") class="btnHireMe">DOWNLOAD CV<img src="assets/down-arrow.png" id="arrowRight"></button>
                     <button onclick=onclick=openInNewTab("https://dahamblog.com") 
                     class="btnHireMe" style=" background-color: #413F42; margin-left: 16px">VISIT MY BLOG<img src="assets/arrow_right_icon.png" style="width: 11px; padding-left: 6px;">

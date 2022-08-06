@@ -59,6 +59,12 @@ appBarTemplate.innerHTML = `
     color: white;
     padding-right: 10px;
 }
+
+@media screen and (max-width: 467px){
+    #socialIconSec {
+        display: none;
+    }
+}
 </style>
 
 <section id="appBarSection">

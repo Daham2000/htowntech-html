@@ -27,6 +27,12 @@ headerComponent.innerHTML = `
     flex-direction: row;
 }
 
+@media screen and (max-width: 800px) {
+    #headerButtonSection {
+        display: none;
+    }
+}
+
 .btnHeader {
     color: black;
     font-family: Arial;
@@ -90,10 +96,8 @@ class HeaderComponent extends HTMLElement {
     }
 }
 
-function onClickMove(section){
-    console.log(section)
+function onClickMove(section) {
     document.getElementById(section).scrollIntoView();
 }
-
 
 window.customElements.define('header-component', HeaderComponent);
