@@ -118,6 +118,11 @@ servicesTemplate.innerHTML = `
     flex-direction: row; 
     margin: 25px;
 }
+#sectionServiceTwo {
+    display: flex; 
+    flex-direction: row; 
+    margin-bottom: 25px;
+}
 
 @media screen and (max-width: 980px) {
   #sectionService {
@@ -127,20 +132,20 @@ servicesTemplate.innerHTML = `
     justify-content: center;
     align-items: center;
     margin: 25px;
-}
-}
-#sectionServiceTwo {
-    display: flex; 
-    flex-direction: row; 
-    margin-bottom: 25px;
-}
-@media screen and (max-width: 697px) {
-  #sectionServiceTwo {
-    display: flex; 
-    flex-direction: column; 
-}
+  }
 }
 
+@media screen and (max-width: 697px) {
+    #sectionServiceTwo {
+       display: flex; 
+       flex-direction: column; 
+    }
+    #sectionService {
+       margin: 0px;
+    }
+    .serviceBox {
+       margin-right: 0px;
+    }
 }
 </style>
 
