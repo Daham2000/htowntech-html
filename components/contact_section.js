@@ -98,6 +98,17 @@ input{
     align-items: flex-start;
     text-align: left;
 }
+@media screen and (max-width: 800px) {
+    #contactForm{
+        margin-top: 25px;
+        margin-left: 0vw;
+    }
+    #contactBackground{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
 </style>
 
 <section class="columnSection">

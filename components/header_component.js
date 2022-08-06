@@ -27,7 +27,7 @@ headerComponent.innerHTML = `
     flex-direction: row;
 }
 
-@media screen and (max-width: 762px) {
+@media screen and (max-width: 800px) {
     #headerButtonSection {
         display: none;
     }
