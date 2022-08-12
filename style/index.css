@@ -170,6 +170,9 @@ body {
     width: 80vw;
     height: 60vh;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Next & previous buttons */
@@ -212,13 +215,7 @@ body {
     display: none;
 }
 
-.mySlides_p img{
-    width: 80vw;
-    height: 400px
-}
-
 img {vertical-align: middle;}
-
 
 .footerID{
     display: flex;
@@ -363,4 +360,18 @@ hr.solid {
         width: 120px;
         margin-right: 5px;
     }
+}
+
+.btnContactMe{
+    border-color: #5e9eff;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    color: #4579cb;
+    font-size: 10px;
+    cursor: pointer;
+    background: white 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    text-align: center;
 }

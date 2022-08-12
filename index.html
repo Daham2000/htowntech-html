@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/index.css">
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <style>
+        @font-face {
+            font-family: OpenSans;
+            src: url("/assets/OpenSans-Regular.ttf");
+        }
+    </style>
 </head>
 <body>
 
@@ -57,19 +63,13 @@
 <section id="projectsSection">
     <h3 class="projectText">Project</h3>
     <h4 class="projectTextDes">SOME OF MY WORKS</h4>
-    <div class="slideshow-container-projects">
+    <br>
+    <div class="slideshow-container-projects" id="projectSlider">
 
-        <div class="mySlides_p fade">
-            <img src="assets/laptop.png">
-        </div>
-
-        <div class="mySlides_p fade">
-            <img src="assets/laptop_2.jpg">
-        </div>
-
-        <div class="mySlides_p fade">
-            <img src="assets/laptop_3.jpg">
-        </div>
+        <project-component class="mySlides_p fade" name="MovieZilla"
+                           description="A movie review application developed for movie lovers to read articles of upcoming and popular movies."
+                           image="../assets/movilezilla_project.png"
+                           link="https://moviezillalk1.netlify.app"></project-component>
 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
@@ -89,7 +89,8 @@
         <div class="footerTopColumn">
             <h2 id="dahamIDName">DAHAM.</h2>
             <p class="footerParam">You want a high performance application to scale up your business or
-                to convert your own genuine app idea to a real world application. Can you contact me anytime you want.</p>
+                to convert your own genuine app idea to a real world application. Can you contact me anytime you
+                want.</p>
             <h2 class="projectText">FOLLOW ME ON</h2>
             <div id="socialIconSec">
                 <img src="assets/twitter_icon.png" class="socialIcon">
@@ -126,7 +127,9 @@
 <script src="components/contact_section.js"></script>
 <script src="components/about_component.js"></script>
 <script src="components/services_component.js"></script>
+<script src="components/project_component.js"></script>
 <script src="controllers/slider_ctrl.js"></script>
+<script src="controllers/project_slider_ctrl.js"></script>
 
 </body>
 </html>
