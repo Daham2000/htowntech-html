@@ -1,7 +1,10 @@
-const aboutTemplate = document.createElement('template');
+function openInNewTab(url) {
+    window.open(url, '_blank').focus();
+}
 
-aboutTemplate.innerHTML = `
-<style>
+function getComponent() {
+    return `
+        <style>
 #rowSection{
     margin: 20px;
     display: flex;
@@ -274,7 +277,7 @@ aboutTemplate.innerHTML = `
                 </div>
                 <div id="buttonSection">
                     <button onclick=openInNewTab("https://drive.google.com/file/d/16Wek-g5pC16qFwFlmJy7buvY0Wjpt0wi/view?usp=sharing") class="btnHireMe">DOWNLOAD CV<img src="assets/down-arrow.png" id="arrowRight"></button>
-                    <button onclick=onclick=openInNewTab("https://dahamblog.com") 
+                    <button onclick=openInNewTab("https://dahamblog.com") 
                     class="btnHireMe" style=" background-color: #413F42; margin-left: 16px">VISIT MY BLOG<img src="assets/arrow_right_icon.png" style="width: 11px; padding-left: 6px;">
                     </button>
                 </div>
@@ -283,17 +286,13 @@ aboutTemplate.innerHTML = `
         </div>
     </div>
 </section>
-`;
-
-function openInNewTab(url) {
-    window.open(url, '_blank').focus();
+    `;
 }
 
 class AboutComponent extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({mode: 'open'});
-        this.shadowRoot.appendChild(aboutTemplate.content.cloneNode(true));
+        this.innerHTML = getComponent();
     }
 }
 
