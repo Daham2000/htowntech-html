@@ -1,6 +1,4 @@
-const contactTemplate = document.createElement('template');
-
-contactTemplate.innerHTML = `
+const contactTemplate = `
 <style>
 
 .btnHireMe {
@@ -8,6 +6,7 @@ contactTemplate.innerHTML = `
     height: 30px;
     color: white;
     font-size: 11px;
+    text-align: center;
     cursor: pointer;
     background: #064EA3 0% 0% no-repeat padding-box;
     border-radius: 5px;
@@ -86,6 +85,11 @@ input{
     border-radius: 5px;
     opacity: 1;
     padding-left: 10px;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+input:focus {
+  outline: 3px solid transparent;
 }
 
 .labelClass{
@@ -98,6 +102,23 @@ input{
     align-items: flex-start;
     text-align: left;
 }
+
+textarea {
+   width: 371px;
+    margin-bottom: 20px;
+    height: 40px;
+    border: 0.30000001192092896px solid #C4C4C4;
+    border-radius: 5px;
+    opacity: 1;
+    padding-left: 10px;
+    padding-top: 5px;
+  resize: none;
+}
+
+textarea:focus {
+  outline: 3px solid transparent;
+}
+
 @media screen and (max-width: 800px) {
     #contactForm{
         margin-top: 25px;
@@ -129,6 +150,9 @@ input{
     input {
         width: 55vw;
     }
+    textarea {
+        width: 55vw;
+    }
     .btnHireMe{
         width: 55vw;
     }
@@ -140,27 +164,27 @@ input{
     <h4 class="blackText">GET IN TOUCH</h4>
     <div id="contactBackground">
         <div>
-            <form id="contactForm">
+            <form id="contactForm" onsubmit="onFormSubmit();return false" action="">
 
                 <div class="labelClass">
                     <label for="fname" class="formLabel">FIRST NAME*</label>
                 </div>
-                <input type="text" id="fname" name="firstname">
+                <input type="text" id="fname" name="firstname" required>
 
                 <div class="labelClass">
                     <label class="formLabel" for="lname">LAST NAME*</label>
                 </div>
-                <input type="text" id="lname" name="lastname">
+                <input type="text" id="lname" name="lastname" required>
 
                 <div class="labelClass">
                     <label class="formLabel" for="email">EMAIL*</label>
                 </div>
-                <input type="text" id="email" name="email">
+                <input type="text" id="email" name="email" required>
 
                 <div class="labelClass">
                     <label class="formLabel" for="message">MESSAGE*</label>
                 </div>
-                <input type="text" id="message" name="message" style="height: 60px">
+                <textarea id="message" name="message" style="height: 60px"></textarea>
 
                 <input class="btnHireMe" type="submit" value="SEND MESSAGE">
             </form>
@@ -169,11 +193,34 @@ input{
 </section>
 `;
 
+async function onFormSubmit() {
+    const fName = document.getElementById("fname");
+    const lName = document.getElementById("lname");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+    if (fName.value !== "" && lName.value !== "" && email.value !== "" && message.value !== "") {
+        try {
+            fetch('https://jsonplaceholder.typicode.com/todos/1', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then((data) => {
+                if (data.status === 200) {
+                    const message = "Your message sent. We will get back to you ASAP. Thanks.";
+
+                }
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    }
+}
+
 class ContactComponent extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({mode: 'open'});
-        this.shadowRoot.appendChild(contactTemplate.content.cloneNode(true));
+        this.innerHTML = contactTemplate;
     }
 }
 
