@@ -157,6 +157,43 @@ textarea:focus {
         width: 55vw;
     }
 }
+#toastMessage{
+    position: fixed;
+    bottom: 5%;
+    width: 225px;
+    height: 20px;
+    background-color: #12b412;
+    color: #FFFFFF;
+    font-family: Arial,serif;
+    font-size: 14px;
+    animation-name: example;
+    animation-duration: 2s;
+    padding: 10px 10px 25px;
+    display: none;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    border-radius: 5px;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
 </style>
 
 <section class="columnSection">
@@ -190,6 +227,7 @@ textarea:focus {
             </form>
         </div>
     </div>
+    <div id="toastMessage">Your message sent. We will get back to you ASAP. Thanks.</div>
 </section>
 `;
 
@@ -200,15 +238,27 @@ async function onFormSubmit() {
     const message = document.getElementById("message");
     if (fName.value !== "" && lName.value !== "" && email.value !== "" && message.value !== "") {
         try {
-            fetch('https://jsonplaceholder.typicode.com/todos/1', {
-                method: 'GET',
+            const data = {
+                "email": email.value,
+                "firstName": fName.value,
+                "message": message.value,
+                "lastName": lName.value
+            };
+            fetch('https://portfolio-web-be.herokuapp.com/root/contact-me', {
+                method: 'POST',
+                body: JSON.stringify(data),
                 headers: {
                     'Content-Type': 'application/json'
                 }
             }).then((data) => {
                 if (data.status === 200) {
                     const message = "Your message sent. We will get back to you ASAP. Thanks.";
-
+                    const toastMessageElement = document.getElementById("toastMessage");
+                    toastMessageElement.textContent = message;
+                    toastMessageElement.style.display = "block";
+                    setTimeout(function() {
+                        toastMessageElement.style.display = "none";
+                    }, 3000);
                 }
             });
         } catch (e) {
